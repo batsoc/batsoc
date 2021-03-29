@@ -1,0 +1,91 @@
+.btn {
+  @apply inline-block px-4 py-2 duration-150 ease-in-out border border-transparent rounded text-base no-underline text-center;
+
+  &:hover {
+    text-decoration: none;
+  }
+  &:focus {
+    @apply outline-none;
+  }
+}
+
+// cool button
+// inline-flex justify-center px-4 py-2 text-sm font-medium text-white bg-orange-600 border border-transparent rounded-md shadow-sm hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500
+
+.btn-primary {
+  @apply bg-orange-500 text-white; // brand color
+
+  &:hover {
+    @apply text-white bg-orange-400;
+  }
+  &:focus {
+    @apply text-white border-orange-700;
+  }
+  &:active {
+    @apply text-white bg-orange-700;
+  }
+}
+
+.btn-secondary {
+  @apply bg-navy-500 text-white;
+
+  &:hover {
+    @apply text-white bg-navy-400;
+  }
+  &:focus {
+    @apply text-white border-navy-600;
+  }
+  &:active {
+    @apply text-white bg-navy-600;
+  }
+}
+
+.btn-outline {
+  // leading-5
+  @apply text-gray-500 bg-transparent border border-gray-200;
+
+  &:hover {
+    @apply text-gray-700 bg-gray-100;
+  }
+  &:focus,
+  &:active {
+    @apply border-navy-300 text-gray-300; //  shadow-outline-navy
+  }
+
+  &.btn-primary {
+    @apply border-orange-500 text-orange-500;
+
+    &:hover {
+      @apply text-gray-100 bg-orange-500;
+    }
+  }
+
+  &.btn-secondary {
+    @apply border-navy-500 text-navy-500;
+
+    &:hover {
+      @apply text-gray-100 bg-navy-500;
+    }
+  }
+}
+
+.btn-lg {
+  @apply px-5 py-3 text-base leading-6 text-white rounded-md font-bold;
+
+  @screen md {
+    @apply py-4 text-lg px-10;
+  }
+}
+
+// .btn-link {
+//   @apply text-navy-500 font-normal;
+
+//   &:hover {
+//     text-decoration: underline;
+//   }
+// }
+
+.btn:disabled,
+.btn[disabled] {
+  @apply opacity-50 cursor-not-allowed;
+}

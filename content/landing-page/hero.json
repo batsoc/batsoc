@@ -1,0 +1,19 @@
+{
+  "h1": "Help us save the *endangered Spectacled Flying Fox!*",
+  "subHeading": " Help us save the endangered Spectacled Flying Fox, an essential pollinator and seed disperser for the wet tropics! We are volunteers working with locals legislators to protect them. ",
+  "buttons": [
+    {
+      "label": "Join us on Patreon",
+      "url": "/",
+      "isPrimary": true
+    },
+    {
+      "label": "Learn more",
+      "url": "/#what-we-do",
+      "isPrimary": false
+    }
+  ],
+  "h1Line1": "Help us save the endangered",
+  "h1Line2": "Spectacled Flying Fox!",
+  "img": "/img/fox5.jpg"
+}

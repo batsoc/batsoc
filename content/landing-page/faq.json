@@ -1,0 +1,23 @@
+{
+  "heading": " Frequently asked questions ",
+  "h2": " Learn about Flying Fox ",
+  "subHeading": " Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam. ",
+  "questions": [
+    {
+      "question": "What's the best thing about Flying foxes?",
+      "answer": "**Everything is!** Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.\n\n![Cute AF!](/img/fox9.jpg \"Cute AF!\")\n\nThis is how:\n\n* Lorem ipsum dolor sit\n* Amet consectetur adipisicing elit. \n* Quas cupiditate laboriosam fugiat."
+    },
+    {
+      "question": "What's the best thing about Flying f0xes?",
+      "answer": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat."
+    },
+    {
+      "question": "What's the best thing ab0ut Flying foxes?",
+      "answer": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat."
+    },
+    {
+      "question": "What's the best th1ng about Flying foxes?",
+      "answer": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat."
+    }
+  ]
+}

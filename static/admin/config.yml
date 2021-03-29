@@ -1,0 +1,432 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: static/img
+public_folder: '/img' # we need them saved with no path, just names on the root of /img-cms
+
+x-meta-default: &metaDefault
+  widget: 'string'
+  required: false
+
+x-widget-md-min: &WidgetMDMin
+  widget: 'markdown'
+  buttons: ['italic', 'bold', 'link', 'heading-three', 'heading-four', 'bulleted-list', 'numbered-list']
+  minimal: true
+  editorComponents: ['image']
+
+x-meta: &metaAll
+  - label: 'Page Title (browser top bar)'
+    name: 'title'
+    <<: *metaDefault
+  - label: 'Meta Description'
+    name: 'description'
+    <<: *metaDefault
+  - label: 'OpenGraph Image'
+    name: 'og_image'
+    widget: 'image'
+    required: false
+  - label: 'OpenGraph Title'
+    name: 'og_title'
+    <<: *metaDefault
+  - label: 'OpenGraph Description'
+    name: 'og_description'
+    <<: *metaDefault
+  - label: 'Twitter Image'
+    name: 'twitter_image'
+    widget: 'image'
+    required: false
+  - label: 'Twitter Title'
+    name: 'twitter_title'
+    <<: *metaDefault
+  - label: 'Twitter Description'
+    name: 'twitter_description'
+    <<: *metaDefault
+  - label: 'Published at'
+    name: 'published_at'
+    widget: 'datetime'
+  - label: 'Updated at'
+    name: 'updated_at'
+    widget: 'datetime'
+
+# Collections https://www.netlifycms.org/docs/configuration-options/#collections
+collections:
+  ##
+  ## Landing Page Collection
+  ##
+  - label: Landing Page
+    name: landing-page
+    files:
+      - label: Hero Section
+        name: hero
+        format: 'json'
+        file: 'content/landing-page/hero.json'
+        editor:
+          preview: false
+        fields:
+          - label: Large Heading Text Line 1
+            name: h1Line1
+            widget: string
+          - label: Large Heading Text Line 2
+            name: h1Line2
+            widget: string
+          - label: Sub-Heading Text
+            name: subHeading
+            widget: string
+          - label: 'Buttons'
+            name: 'buttons'
+            widget: 'list'
+            summary: '{{fields.label}}: {{fields.url}}'
+            fields:
+              - label: 'Button Text'
+                name: label
+                widget: string
+                default: ''
+              - label: 'URL excluding batsoc.org.au'
+                name: url
+                widget: string
+                default: '/'
+              - label: 'Primary Button?'
+                name: isPrimary
+                widget: boolean
+                default: false
+          - label: Hero Image
+            name: img
+            widget: image
+
+      - label: Logo Cloud Section
+        name: logo-cloud
+        format: 'json'
+        file: 'content/landing-page/logo-cloud.json'
+        editor:
+          preview: false
+        fields:
+          - label: 'Logos'
+            name: 'logos'
+            widget: 'list'
+            summary: '{{fields.img}}: {{fields.alt}}'
+            fields:
+              - label: 'Logo Image (must be png or svg transparent)'
+                name: img
+                widget: image
+              - label: 'Logo Text (what Org is this logo for?)'
+                name: alt
+                widget: string
+                default: ''
+              - label: 'URL (https://example.com)'
+                name: url
+                widget: string
+                default: '/'
+                required: false
+
+      - label: What We Do Section
+        name: features
+        format: 'json'
+        file: 'content/landing-page/features.json'
+        editor:
+          preview: false
+        fields:
+          - label: Heading Text Line 1
+            name: h2
+            widget: string
+          - label: Heading Text Line 2 (Large text)
+            name: heading
+            widget: string
+          - label: Sub-Heading Text
+            name: subHeading
+            widget: string
+          - label: 'What we do sub-sections'
+            name: 'subSections'
+            widget: 'list'
+            summary: '{{fields.heading}}: {{fields.label}}, {{fields.url}}'
+            fields:
+              - label: 'Heading Text'
+                name: heading
+                widget: string
+                default: ''
+              - label: 'More Information Text'
+                name: text
+                widget: text
+                default: ''
+              - label: 'Button Text'
+                name: btnLabel
+                widget: string
+                default: 'Learn more'
+              - label: 'URL excluding batsoc.org.au'
+                name: btnUrl
+                widget: string
+                default: '/'
+              - label: Image
+                name: img
+                widget: image
+
+      - label: Call-To-Action (CTA) Section
+        name: cta1
+        format: 'json'
+        file: 'content/landing-page/cta1.json'
+        editor:
+          preview: false
+        fields: 
+          - label: Heading Text Line 1
+            name: h2
+            widget: string
+            required: true
+          - label: Heading Text Line 2 (Large text)
+            name: heading
+            widget: string
+            required: true
+          - label: CTA Text
+            hint: Up to 3-5 short sentences, explaining why they should support us on Patreon
+            name: ctaText
+            widget: text
+            required: true
+          - label: 'Call to Action Button Text'
+            name: btnLabel
+            widget: string
+            default: 'Learn more'
+            required: true
+          - label: 'URL excluding batsoc.org.au'
+            name: btnUrl
+            widget: string
+            default: '/'
+            required: true
+          - label: Image
+            name: img
+            widget: image
+            required: true
+
+      - label: Events Section Heading (events are separate)
+        name: events-heading
+        format: 'json'
+        file: 'content/landing-page/events-heading.json'
+        editor:
+          preview: false
+        fields: 
+          - label: Heading Text Line 1
+            name: h2
+            widget: string
+          - label: Heading Text Line 2 (Large text)
+            name: heading
+            widget: string
+          - label: Sub-Heading Text
+            name: subHeading
+            widget: string
+
+      - label: Frequently Asked Questions Section
+        name: faq
+        format: 'json'
+        file: 'content/landing-page/faq.json'
+        editor:
+          preview: false
+        fields:
+          - label: Heading Text Line 1
+            name: h2
+            widget: string
+          - label: Heading Text Line 2 (Large text)
+            name: heading
+            widget: string
+          - label: Sub-Heading Text
+            name: subHeading
+            widget: string
+          - label: 'The Questions'
+            name: 'questions'
+            widget: 'list'
+            summary: '{{fields.question}}'
+            fields:
+              - label: 'FAQ Question'
+                name: question
+                widget: string
+              - label: 'FAQ Answer'
+                name: answer
+                <<: *WidgetMDMin
+
+      - label: Team Section
+        name: team
+        format: 'json'
+        file: 'content/landing-page/team.json'
+        editor:
+          preview: false
+        fields:
+          - label: Heading Text (Large text)
+            name: h2
+            widget: string
+          # - label: Heading Text Line 2 (Large text)
+          #   name: heading
+          #   widget: string
+          - label: About the Team Text
+            name: aboutText
+            widget: text
+          - label: 'Team Members'
+            name: 'members'
+            widget: 'list'
+            summary: '{{fields.name}}'
+            fields:
+              - label: 'Name'
+                name: name
+                widget: string
+                required: true
+              - label: 'Position or Title'
+                hint: 'President or Social Media Manager, etc.'
+                name: title
+                widget: string
+                required: true
+              - label: 'About the person'
+                hint: 'A couple of sentences about the team member and their role.'
+                name: desc
+                widget: text
+                required: true
+              - label: 'Member Photo'
+                name: 'img'
+                widget: 'image'
+                required: true
+              - label: 'Twitter @username (not URL)'
+                hint: 'Not URL or @user, just batsandtreessocietyofcairns for example.'
+                name: 'twitter'
+                widget: 'string'
+                required: false
+              - label: 'Instagram @username (not URL)'
+                hint: 'Not URL or @user, just batsandtreessocietyofcairns for example.'
+                name: 'instagram'
+                widget: 'string'
+                required: false
+              - label: 'Website URL (https://example.com)'
+                name: 'websiteUrl'
+                widget: 'string'
+                pattern: ['https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)', "Must be a url. Example: https://test.com"]
+                required: false
+              
+  
+  ##
+  ## Events Collection
+  ##
+  - name: 'events'
+    label: 'Events'
+    folder: 'content/events'
+    create: true
+    slug: '{{slug}}'
+    format: 'json'
+    editor:
+      preview: false
+    # sort: 'published_at:desc'
+    fields:
+      - label: 'Event Title'
+        name: 'title'
+        widget: 'string'
+        required: true
+      - label: 'Event Date'
+        hint: 'Enter event date. If you set the date to 2099, it becomes "Ongoing". You can use for hiring Volonteers long term, and link to a form of your choosing.'
+        name: 'eventAt'
+        required: true
+        widget: "datetime"
+        date_format: "DD-MM-YYYY" # e.g. 24.12.2021
+        time_format: "HH:mm" # e.g. 21:07
+        format: "YYYY-MM-DDTHH:mm:ss.sss+10:00"
+        # picker_utc: true
+      - label: 'Event Location'
+        hint: '(optional) Enter a location to display (17 X Drive, Kuranda, QLD, Australia). Write in the country for international audience. Or in case traveling in the future.'
+        name: 'location'
+        required: false
+        widget: "string"
+      - label: 'Short excerpt'
+        hint: 'Short excerpt. About 30 words.'
+        name: 'excerpt'
+        required: true
+        widget: "text"
+      - label: 'Event URL'
+        hint: 'URL Link to Event on Facebook or anywhere else with full details'
+        name: 'url'
+        pattern: ['https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)', "Must be a url. Example: https://test.com"]
+        required: true
+        widget: "string"
+      - label: 'Event Image'
+        hint: '(optional) If no image is chosen, a static fox1.jpg image will be displayed.'
+        name: 'img'
+        widget: 'image'
+        required: false
+      
+  ## 
+  ## Pages Collection
+  ##
+  # - name: 'pages'
+  #   label: 'Pages'
+  #   folder: 'content/pages'
+  #   create: true
+  #   slug: '{{slug}}'
+  #   format: 'json'
+  #   # sort: 'published_at:desc'
+  #   fields:
+  #     - { label: Title, name: title, widget: string }
+  #     - { label: Subtitle, name: subtitle, widget: text, required: false }
+  #     - { label: Content, name: content, widget: markdown }
+  #     - { label: 'Featured Image', name: featuredImage, widget: image, required: false }
+  #     - { label: 'SEO Description', name: seoDescription, widget: text, required: false }
+  #     - { label: 'SEO Meta Image', name: seoMetaImage, widget: image, required: false }
+
+  ## 
+  ## Settings Collection
+  ##
+  - label: Settings
+    name: settings
+    files:
+      - label: General
+        name: general
+        format: 'json'
+        file: 'content/settings/site-settings.json'
+        editor:
+          preview: false
+        fields:
+          - label: 'Facebook Page slug (not url)'
+            name: 'facebook'
+            widget: 'string'
+          - label: 'Twitter @username (not URL)'
+            name: 'twitter'
+            widget: 'string'
+          - label: 'Instagram @username (not URL)'
+            name: 'instagram'
+            widget: 'string'
+          - label: "Navigate Left CTA Button"
+            name: "nav_left_button"
+            widget: "object"
+            summary: '{{fields.label}}: {{fields.url}}'
+            fields:
+              - label: 'Anchor Text'
+                name: label
+                widget: string
+                default: ''
+              - label: 'URL excluding batsoc.org.au'
+                name: url
+                widget: string
+                default: '/'
+          - label: 'Top Navigation Menu buttons'
+            name: 'navigation'
+            widget: 'list'
+            summary: '{{fields.label}}: {{fields.url}}'
+            fields:
+              - label: 'URL Anchor'
+                name: label
+                widget: string
+                default: ''
+              - label: 'URL excluding batsoc.org.au'
+                name: url
+                widget: string
+                default: '/'
+          - label: 'Footer Links'
+            name: 'footerLinks'
+            widget: 'list'
+            summary: '{{fields.label}}: {{fields.url}}'
+            fields:
+              - label: 'URL Anchor'
+                name: label
+                widget: string
+                default: ''
+              - label: 'URL excluding batsoc.org.au'
+                name: url
+                widget: string
+                default: '/'
+          - label: 'Footer text'
+            name: 'footerText'
+            widget: 'string'
+          - label: 'Meta Data Defaults'
+            name: 'meta'
+            widget: 'object'
+            fields: *metaAll

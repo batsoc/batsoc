@@ -1,16 +1,20 @@
-### Hi there 👋
+# batsoc
 
-<!--
-**batsoc/batsoc** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+## Build Setup
 
-Here are some ideas to get you started:
+```bash
+# install dependencies
+$ npm install
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+# serve with hot reload at localhost:3000
+$ npm run dev
+
+# build for production and launch server
+$ npm run build
+$ npm run start
+
+# generate static project
+$ npm run generate
+```
+
+For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).

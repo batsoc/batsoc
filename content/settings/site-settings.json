@@ -1,0 +1,58 @@
+{
+  "meta": {
+    "published_at": "2021-03-22T17:55:00.300Z",
+    "updated_at": "2021-03-22T17:55:00.300Z"
+  },
+  "navigation": [
+    {
+      "label": "What do we do?",
+      "url": "/#what-do-we-do"
+    },
+    {
+      "label": "Events",
+      "url": "/#events"
+    },
+    {
+      "label": "FAQ",
+      "url": "/#faq"
+    },
+    {
+      "label": "Team",
+      "url": "/#team"
+    },
+    {
+      "label": "Contact Us",
+      "url": "/contact"
+    }
+  ],
+  "footerLinks": [
+    {
+      "label": "What do we do?",
+      "url": "/#what-do-we-do"
+    },
+    {
+      "label": "Upcoming Events",
+      "url": "/#events"
+    },
+    {
+      "label": "FAQ",
+      "url": "/#faq"
+    },
+    {
+      "label": "Our Team",
+      "url": "/#team"
+    },
+    {
+      "label": "Contact Us",
+      "url": "/contact"
+    }
+  ],
+  "facebook": "BATSOCinc",
+  "twitter": "BATSOCinc",
+  "instagram": "batsandtreessocietyofcairns",
+  "footerText": "© 2021 BatSoc Inc, Inc. All rights reserved. P.O Box 528, Kuranda, Queensland, 4881. Australia",
+  "nav_left_button": {
+    "label": "Donate via Patreon",
+    "url": "https://www.patreon.com/Twistoffatefarmsanctuary"
+  }
+}

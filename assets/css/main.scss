@@ -1,0 +1,26 @@
+/*! purgecss start ignore */
+
+// recommended by tailwind css to have base + components in purge-ignore block
+// import tailwind
+@import 'base';
+@import 'tailwindcss/components';
+
+/*! purgecss end ignore */
+
+@import 'buttons';
+
+// .bg-medical {
+//   @apply bg-repeat;
+
+//   // see https://github.com/vuejs/vue-loader/issues/646#issuecomment-283844367
+//   // if less than 5000 bytes (nuxt.config.js), inlined
+//   background-image: url('~@/static/img/pattern-med.png');
+//   background-position: 18% 0;
+// }
+
+// .formulate-form-errors {
+//   @apply text-red-700 text-sm;
+// }
+
+// keep at end of file and outside purgecss ignore block
+@import 'tailwindcss/utilities';

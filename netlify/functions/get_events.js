@@ -1,12 +1,9 @@
-// const eventbrite = require("eventbrite").default;
+const eventbrite = require('eventbrite').default
+
+const TOKEN = 'C5YS7CFT2MCQKGEQMAYO'
+const ORGANIZATION_ID = '528067544369'
 
 exports.handler = async function (event, context, callback) {
-  //   import eventbrite from 'eventbrite'
-  const eventbrite = require('eventbrite').default
-
-  const TOKEN = 'C5YS7CFT2MCQKGEQMAYO'
-  const ORGANIZATION_ID = '528067544369'
-
   const sdk = eventbrite({ token: TOKEN })
 
   var orderBy = event.queryStringParameters.order_by || 'start_asc'
@@ -16,7 +13,7 @@ exports.handler = async function (event, context, callback) {
   // See: https://www.eventbrite.com/developer/v3/endpoints/users/#ebapi-get-users-id
   // See https://www.eventbrite.com/platform/api#/reference/event/list/list-events-by-organization
   var res = await sdk.request(
-    `/organizations/${ORGANIZATION_ID}/events?order_by=${orderBy}&time_filter=${timeFilter}&page_size=${pageSize}&expand=venue`
+    `/organizations/${ORGANIZATION_ID}/events?order_by=${orderBy}&time_filter=${timeFilter}&page_size=${pageSize}&expand=venue&status=live,started,completed,canceled`
   )
 
   callback(null, {

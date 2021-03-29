@@ -1,7 +1,10 @@
 <template>
   <!-- This example requires Tailwind CSS v2.0+ -->
   <div class="relative px-4 pb-20 bg-white sm:px-6 lg:pb-28 lg:px-8">
-    <div class="relative mx-auto max-w-7xl">
+    <div
+      class="relative mx-auto max-w-7xl"
+      v-if="eventsFutureData.events.length > 0"
+    >
       <landing-section-header
         :h2="headingData.h2"
         :heading="headingData.heading"

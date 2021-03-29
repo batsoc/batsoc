@@ -9,7 +9,7 @@
     <landing-events
       id="events"
       :eventsFutureData="eventsFutureData"
-      :eventsPastData="eventsFutureData"
+      :eventsPastData="eventsPastData"
       :headingData="eventsHeadingData"
     />
 
@@ -69,7 +69,9 @@ export default {
     },
     getEventsPastData() {
       this.$axios
-        .$get('/.netlify/functions/get_events?time_filter=past')
+        .$get(
+          '/.netlify/functions/get_events?time_filter=past&order_by=start_desc'
+        )
         .then((res) => {
           this.eventsPastData = res
         })

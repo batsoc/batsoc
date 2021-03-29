@@ -11,15 +11,15 @@
         class="grid max-w-lg gap-5 mx-auto mt-12 auto-rows-max lg:grid-cols-3 lg:max-w-none"
       >
         <div
-          v-for="event in getFutureEvents()"
-          :key="event.slug"
+          v-for="event in eventsFutureData.events"
+          :key="event.id"
           class="flex flex-col overflow-hidden rounded-lg shadow-lg"
         >
           <div class="flex-shrink-0">
             <base-img
               img-class="w-full h-48"
-              :src="event.img ? event.img : '/img/fox1.jpg'"
-              :alt="event.title"
+              :src="event.logo ? event.logo.url : '/img/fox1.jpg'"
+              :alt="event.name.text"
               size="md"
             />
           </div>
@@ -27,7 +27,7 @@
             <div class="flex-1">
               <p class="flex items-center text-sm text-gray-500">
                 <calendar-icon class="w-5 h-5 mr-2"></calendar-icon>
-                {{ getDateFormatted(event.eventAt) }}
+                {{ event.start.utc | formatDate(event.start.timezone) }}
                 <!-- <span
                   class="ml-1"
                   title="If you set the date to 2099, it becomes 'Ongoing'. You can use for hiring Volonteers."
@@ -38,21 +38,27 @@
 
               <p
                 class="flex items-center mt-3 text-sm text-gray-500"
-                v-if="event.location"
+                v-if="event.venue && event.venue.address"
               >
                 <map-pin-icon class="w-5 h-5 mr-2"></map-pin-icon>
-                {{ event.location }}
+                {{ event.venue.address.localized_address_display }}
               </p>
 
               <div class="block mt-3">
                 <p class="text-xl font-semibold text-gray-900">
-                  {{ event.title }}
+                  {{ event.name.text }}
                 </p>
-                <p class="mt-3 text-base text-gray-500">{{ event.excerpt }}</p>
+                <p class="mt-3 text-base text-gray-500">
+                  {{ event.description.text }}
+                </p>
               </div>
             </div>
             <div class="flex items-center mt-6" v-if="event.url">
-              <a :href="event.url" class="w-full btn btn-secondary btn-outline">
+              <a
+                :href="event.url"
+                target="_blank"
+                class="w-full btn btn-secondary btn-outline"
+              >
                 Go to event details
               </a>
             </div>
@@ -61,11 +67,11 @@
       </div>
     </div>
 
-    <div v-if="getPastEvents().length > 0">
+    <div v-if="eventsPastData.events.length > 0">
       <landing-section-header id="events" h2="Past Bat Society Events" />
       <landing-events-past
         class="max-w-3xl mx-auto mt-8"
-        :past-events="getPastEvents()"
+        :past-events="eventsPastData.events"
       />
     </div>
   </div>
@@ -75,8 +81,12 @@
 import { CalendarIcon, MapPinIcon } from 'vue-feather-icons'
 export default {
   props: {
-    cData: {
-      type: Array,
+    eventsFutureData: {
+      type: Object,
+      required: true,
+    },
+    eventsPastData: {
+      type: Object,
       required: true,
     },
     headingData: {
@@ -87,23 +97,6 @@ export default {
   components: {
     CalendarIcon,
     MapPinIcon,
-  },
-  methods: {
-    getFutureEvents() {
-      return this.cData.filter((event) => {
-        return new Date(event.eventAt) > new Date()
-      })
-    },
-    getPastEvents() {
-      return this.cData.filter((event) => {
-        return new Date(event.eventAt) < new Date()
-      })
-    },
-    getDateFormatted(dateStr) {
-      return this.$dayjs(dateStr)
-        .tz('Australia/Brisbane')
-        .format('dddd, MMMM MM, YYYY HH:mm (Z)')
-    },
   },
 }
 </script>

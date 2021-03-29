@@ -8,7 +8,8 @@
 
     <landing-events
       id="events"
-      :cData="eventsData"
+      :eventsFutureData="eventsFutureData"
+      :eventsPastData="eventsFutureData"
       :headingData="eventsHeadingData"
     />
 
@@ -20,7 +21,13 @@
 
 <script>
 export default {
-  async asyncData({ $content }) {
+  data() {
+    return {
+      eventsFutureData: { events: [] },
+      eventsPastData: { events: [] },
+    }
+  },
+  async asyncData({ $content, $axios }) {
     const heroData = await $content('landing-page/hero').fetch()
     const logoCloudData = await $content('landing-page/logo-cloud').fetch()
     const featuresData = await $content('landing-page/features').fetch()
@@ -30,16 +37,6 @@ export default {
     const eventsHeadingData = await $content(
       'landing-page/events-heading'
     ).fetch()
-
-    // const now = process.server ? new Date().valueOf() : new Date().toJSON()
-    var eventsData = await $content('events')
-      .sortBy('eventAt', 'desc')
-      .limit(10)
-      .fetch()
-      .catch((err) => {
-        console.error('Cannot load events')
-      })
-    eventsData = eventsData.reverse()
 
     const faqData = await $content('landing-page/faq').fetch()
 
@@ -51,10 +48,35 @@ export default {
       featuresData,
       cta1Data,
       eventsHeadingData,
-      eventsData,
       faqData,
       teamData,
     }
+  },
+  mounted() {
+    this.getEventsFutureData()
+    this.getEventsPastData()
+  },
+  methods: {
+    getEventsFutureData() {
+      this.$axios
+        .$get('/.netlify/functions/get_events')
+        .then((res) => {
+          this.eventsFutureData = res
+        })
+        .catch((err) => {
+          console.error('Cannot load future events data', err)
+        })
+    },
+    getEventsPastData() {
+      this.$axios
+        .$get('/.netlify/functions/get_events?time_filter=past')
+        .then((res) => {
+          this.eventsPastData = res
+        })
+        .catch((err) => {
+          console.error('Cannot load past events data', err)
+        })
+    },
   },
 }
 </script>

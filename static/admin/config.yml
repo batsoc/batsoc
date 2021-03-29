@@ -296,54 +296,6 @@ collections:
                 required: false
               
   
-  ##
-  ## Events Collection
-  ##
-  - name: 'events'
-    label: 'Events'
-    folder: 'content/events'
-    create: true
-    slug: '{{slug}}'
-    format: 'json'
-    editor:
-      preview: false
-    # sort: 'published_at:desc'
-    fields:
-      - label: 'Event Title'
-        name: 'title'
-        widget: 'string'
-        required: true
-      - label: 'Event Date'
-        hint: 'Enter event date. If you set the date to 2099, it becomes "Ongoing". You can use for hiring Volonteers long term, and link to a form of your choosing.'
-        name: 'eventAt'
-        required: true
-        widget: "datetime"
-        date_format: "DD-MM-YYYY" # e.g. 24.12.2021
-        time_format: "HH:mm" # e.g. 21:07
-        format: "YYYY-MM-DDTHH:mm:ss.sss+10:00"
-        # picker_utc: true
-      - label: 'Event Location'
-        hint: '(optional) Enter a location to display (17 X Drive, Kuranda, QLD, Australia). Write in the country for international audience. Or in case traveling in the future.'
-        name: 'location'
-        required: false
-        widget: "string"
-      - label: 'Short excerpt'
-        hint: 'Short excerpt. About 30 words.'
-        name: 'excerpt'
-        required: true
-        widget: "text"
-      - label: 'Event URL'
-        hint: 'URL Link to Event on Facebook or anywhere else with full details'
-        name: 'url'
-        pattern: ['https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)', "Must be a url. Example: https://test.com"]
-        required: true
-        widget: "string"
-      - label: 'Event Image'
-        hint: '(optional) If no image is chosen, a static fox1.jpg image will be displayed.'
-        name: 'img'
-        widget: 'image'
-        required: false
-      
   ## 
   ## Pages Collection
   ##

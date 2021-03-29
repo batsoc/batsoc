@@ -25,6 +25,7 @@
     "@tailwindcss/typography": "^0.4.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-prettier": "^3.3.1",
+    "eventbrite": "^1.2.2",
     "fibers": "^5.0.0",
     "netlify-plugin-image-optim": "^0.4.0",
     "nuxt-lazysizes": "^1.2.0",

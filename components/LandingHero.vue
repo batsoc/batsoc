@@ -36,7 +36,7 @@
         class="relative w-full h-64 sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:w-5/12 lg:h-full"
       >
         <base-img
-          class="absolute inset-0 h-full"
+          class="absolute inset-0 w-full h-full"
           :src="cData.img"
           :alt="`${cData.h1Line1} ${cData.h1Line2}`"
         />

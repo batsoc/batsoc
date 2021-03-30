@@ -4,7 +4,7 @@
     :data-src="getSrc()"
     :class="['lazyload']"
     :alt="alt"
-    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50'%3E%3Crect width='50' height='50' style='fill:%23dcf6d5;' /%3E%3C/svg%3E"
+    :src="require('~/static/img/baseimg_placeholder.svg?data')"
   />
 
   <!-- For explanation of v-if v-else see https://vuejs.org/v2/guide/conditional.html -->
@@ -18,7 +18,13 @@
 
   <!-- if gif filetype, no reponsive sizes generated, just webp and compression -->
   <!-- Note: for GIF, the `size` property is ignored -->
-  <img v-else :data-src="'/img/' + getSrc()" :class="['lazyload']" :alt="alt" />
+  <img
+    v-else
+    :data-src="'/img/' + getSrc()"
+    :class="['lazyload']"
+    :alt="alt"
+    :src="require('~/static/img/baseimg_placeholder.svg?data')"
+  />
 </template>
 
 <script>

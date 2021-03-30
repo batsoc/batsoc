@@ -117,7 +117,7 @@
                 :key="navItem.label"
                 :to="navItem.url"
                 class="flex items-center rounded-md hover:bg-gray-50"
-                @click="mobileNavOpen = false"
+                @click.native="mobileNavOpen = false"
               >
                 <span class="text-base font-medium text-gray-900">
                   {{ navItem.label }}

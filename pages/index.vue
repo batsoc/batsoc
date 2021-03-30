@@ -9,7 +9,7 @@
       </div>
     </LazyHydrate>
 
-    <LazyHydrate when-visible>
+    <LazyHydrate when-idle>
       <landing-events id="events" :headingData="eventsHeadingData" />
     </LazyHydrate>
 

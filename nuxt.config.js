@@ -67,19 +67,13 @@ export default {
   axios: {
     baseURL:
       process.env.NODE_ENV == 'production'
-        ? 'https://batsoc.netlify.app'
+        ? 'https://batsoc.org.au'
         : 'http://localhost:8888',
   },
 
   formulate: {
     configPath: '~/formulate.config.js',
   },
-
-  // optimizedImages: {
-  //   optimizeImages: true,
-  //   optimizeImagesInDev: false,
-  //   inlineImageLimit: 5000,
-  // },
 
   webfontloader: {
     google: {

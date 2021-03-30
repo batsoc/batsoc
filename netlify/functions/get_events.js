@@ -1,7 +1,8 @@
 const eventbrite = require('eventbrite').default
 
-const TOKEN = 'C5YS7CFT2MCQKGEQMAYO'
-const ORGANIZATION_ID = '528067544369'
+const TOKEN = process.env.EVENTBRITE_TOKEN || '528067544369'
+const ORGANIZATION_ID =
+  process.env.EVENTBRITE_ORGANIZATION_ID || 'C5YS7CFT2MCQKGEQMAYO'
 
 exports.handler = async function (event, context, callback) {
   const sdk = eventbrite({ token: TOKEN })

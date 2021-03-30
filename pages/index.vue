@@ -1,32 +1,36 @@
 <template>
   <div>
-    <landing-hero :cData="heroData" />
-    <landing-logo-cloud :cData="logoCloudData" />
-    <landing-features :cData="featuresData" />
+    <LazyHydrate never>
+      <div>
+        <landing-hero :cData="heroData" />
+        <landing-logo-cloud :cData="logoCloudData" />
+        <landing-features :cData="featuresData" />
+        <LandingCTA :cData="cta1Data" class="mt-16" />
+      </div>
+    </LazyHydrate>
 
-    <LandingCTA :cData="cta1Data" class="mt-16" />
+    <LazyHydrate when-visible>
+      <landing-events id="events" :headingData="eventsHeadingData" />
+    </LazyHydrate>
 
-    <landing-events
-      id="events"
-      :eventsFutureData="eventsFutureData"
-      :eventsPastData="eventsPastData"
-      :headingData="eventsHeadingData"
-    />
+    <LazyHydrate when-visible>
+      <LandingFAQ id="faq" :cData="faqData" />
+    </LazyHydrate>
 
-    <LandingFAQ id="faq" :cData="faqData" />
-
-    <landing-team id="team" :cData="teamData" />
+    <LazyHydrate never>
+      <landing-team id="team" :cData="teamData" />
+    </LazyHydrate>
   </div>
 </template>
 
 <script>
+import LazyHydrate from 'vue-lazy-hydration'
+
 export default {
-  data() {
-    return {
-      eventsFutureData: { events: [] },
-      eventsPastData: { events: [] },
-    }
+  components: {
+    LazyHydrate,
   },
+
   async asyncData({ $content, $axios }) {
     const heroData = await $content('landing-page/hero').fetch()
     const logoCloudData = await $content('landing-page/logo-cloud').fetch()
@@ -51,34 +55,6 @@ export default {
       faqData,
       teamData,
     }
-  },
-  mounted() {
-    this.getEventsFutureData()
-    this.getEventsPastData()
-  },
-  methods: {
-    getEventsFutureData() {
-      this.$axios
-        .$get('/.netlify/functions/get_events')
-        .then((res) => {
-          this.eventsFutureData = res
-        })
-        .catch((err) => {
-          console.error('Cannot load future events data', err)
-        })
-    },
-    getEventsPastData() {
-      this.$axios
-        .$get(
-          '/.netlify/functions/get_events?time_filter=past&order_by=start_desc'
-        )
-        .then((res) => {
-          this.eventsPastData = res
-        })
-        .catch((err) => {
-          console.error('Cannot load past events data', err)
-        })
-    },
   },
 }
 </script>

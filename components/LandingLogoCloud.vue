@@ -10,7 +10,7 @@
           v-for="logo in cData.logos"
           :key="logo.img"
         >
-          <img
+          <base-img
             class="w-auto rounded max-h-24"
             :src="logo.img"
             :alt="logo.alt"

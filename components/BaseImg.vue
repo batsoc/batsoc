@@ -4,7 +4,7 @@
     :data-src="getSrc()"
     :class="['lazyload']"
     :alt="alt"
-    :src="require('~/static/img/baseimg_placeholder.svg?data')"
+    src="/img/baseimg_placeholder.svg"
   />
 
   <!-- For explanation of v-if v-else see https://vuejs.org/v2/guide/conditional.html -->
@@ -23,7 +23,7 @@
     :data-src="'/img/' + getSrc()"
     :class="['lazyload']"
     :alt="alt"
-    :src="require('~/static/img/baseimg_placeholder.svg?data')"
+    src="/img/baseimg_placeholder.svg"
   />
 </template>
 

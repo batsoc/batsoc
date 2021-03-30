@@ -82,15 +82,13 @@
 <script>
 import { CalendarIcon, MapPinIcon } from 'vue-feather-icons'
 export default {
+  data() {
+    return {
+      eventsFutureData: { events: [] },
+      eventsPastData: { events: [] },
+    }
+  },
   props: {
-    eventsFutureData: {
-      type: Object,
-      required: true,
-    },
-    eventsPastData: {
-      type: Object,
-      required: true,
-    },
     headingData: {
       type: Object,
       required: true,
@@ -99,6 +97,34 @@ export default {
   components: {
     CalendarIcon,
     MapPinIcon,
+  },
+  mounted() {
+    this.getEventsFutureData()
+    this.getEventsPastData()
+  },
+  methods: {
+    getEventsFutureData() {
+      this.$axios
+        .$get('/.netlify/functions/get_events')
+        .then((res) => {
+          this.eventsFutureData = res
+        })
+        .catch((err) => {
+          console.error('Cannot load future events data', err)
+        })
+    },
+    getEventsPastData() {
+      this.$axios
+        .$get(
+          '/.netlify/functions/get_events?time_filter=past&order_by=start_desc'
+        )
+        .then((res) => {
+          this.eventsPastData = res
+        })
+        .catch((err) => {
+          console.error('Cannot load past events data', err)
+        })
+    },
   },
 }
 </script>

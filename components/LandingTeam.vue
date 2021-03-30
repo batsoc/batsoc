@@ -40,9 +40,8 @@
           >
             <li v-for="m in cData.members" :key="m.name">
               <div class="space-y-4">
-                <div class="aspect-w-3 aspect-h-2">
+                <div class="aspect-w-3 aspect-h-2" v-if="m.img">
                   <base-img
-                    v-if="m.img"
                     class="object-cover rounded-lg shadow-lg"
                     :src="m.img"
                     :alt="`${m.name}, ${m.name}`"

@@ -20,10 +20,9 @@
         >
           <div class="flex-shrink-0">
             <base-img
-              img-class="w-full h-48"
+              class="w-full h-48"
               :src="event.logo ? event.logo.url : '/img/fox1.jpg'"
               :alt="event.name.text"
-              size="md"
             />
           </div>
           <div class="flex flex-col justify-between flex-1 p-6 bg-white">

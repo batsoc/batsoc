@@ -25,7 +25,7 @@
           target="_blank"
         >
           <span class="sr-only">Facebook</span>
-          <facebook-icon size="1.5x" class="w-6 h-6"></facebook-icon>
+          <facebook-icon class="w-6 h-6"></facebook-icon>
         </a>
 
         <a
@@ -34,9 +34,13 @@
           target="_blank"
         >
           <span class="sr-only">Instagram</span>
-          <instagram-icon size="1.5x" class="w-6 h-6"></instagram-icon>
+          <instagram-icon class="w-6 h-6"></instagram-icon>
         </a>
       </div>
+      <p class="mt-8 text-base text-center text-gray-200">
+        {{ siteSettings.orgName }} <br />
+        {{ siteSettings.footerAddress }}
+      </p>
       <p class="mt-8 text-base text-center text-gray-200">
         {{ siteSettings.footerText }}
       </p>

@@ -40,16 +40,14 @@
           >
             <li v-for="m in cData.members" :key="m.name">
               <div class="space-y-4">
-                <!-- <div class="aspect-w-3 aspect-h-2"> -->
-                <base-img
-                  v-if="m.img"
-                  class="block aspect-w-3 aspect-h-2"
-                  img-class="object-cover rounded-lg shadow-lg"
-                  :src="m.img"
-                  :alt="`${m.name}, ${m.name}`"
-                  size="md"
-                />
-                <!-- </div> -->
+                <div class="aspect-w-3 aspect-h-2">
+                  <base-img
+                    v-if="m.img"
+                    class="object-cover rounded-lg shadow-lg"
+                    :src="m.img"
+                    :alt="`${m.name}, ${m.name}`"
+                  />
+                </div>
                 <div class="space-y-1 text-lg font-medium leading-6">
                   <h3>{{ m.name }}</h3>
                   <p class="text-navy-500">{{ m.title }}</p>
@@ -68,10 +66,7 @@
                       class="text-gray-400 hover:text-gray-500"
                     >
                       <span class="sr-only">Instagram</span>
-                      <instagram-icon
-                        size="1.5x"
-                        class="w-5 h-5"
-                      ></instagram-icon>
+                      <instagram-icon class="w-5 h-5"></instagram-icon>
                     </a>
                   </li>
                   <li v-if="m.twitter">
@@ -81,7 +76,7 @@
                       class="text-gray-400 hover:text-gray-500"
                     >
                       <span class="sr-only">Twitter</span>
-                      <twitter-icon size="1.5x" class="w-5 h-5"></twitter-icon>
+                      <twitter-icon class="w-5 h-5"></twitter-icon>
                     </a>
                   </li>
                   <li v-if="m.websiteUrl">
@@ -91,7 +86,7 @@
                       class="text-gray-400 hover:text-gray-500"
                     >
                       <span class="sr-only">Website</span>
-                      <globe-icon size="1.5x" class="w-5 h-5"></globe-icon>
+                      <globe-icon class="w-5 h-5"></globe-icon>
                     </a>
                   </li>
                 </ul>

@@ -7,7 +7,7 @@
         <div class="flex justify-start lg:w-0 lg:flex-1">
           <nuxt-link to="/">
             <span class="sr-only">BatSoc</span>
-            <logo class="h-12 sm:h-16" />
+            <logo class="h-12 sm:h-16" :orgName="siteSettings.orgName" />
           </nuxt-link>
         </div>
 

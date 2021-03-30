@@ -50,7 +50,9 @@
   "facebook": "BATSOCinc",
   "twitter": "BATSOCinc",
   "instagram": "batsandtreessocietyofcairns",
-  "footerText": "© 2021 BatSoc Inc, Inc. All rights reserved. P.O Box 528, Kuranda, Queensland, 4881. Australia",
+  "orgName": "Bats and Trees Society of Cairns Inc",
+  "footerAddress": "P.O Box 528, Kuranda, Queensland, 4881. Australia",
+  "footerText": "© 2021 Bats and Trees Society of Cairns, Inc. Built with ❤️ and 🦇",
   "nav_left_button": {
     "label": "Donate via Patreon",
     "url": "https://www.patreon.com/Twistoffatefarmsanctuary"

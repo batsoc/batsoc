@@ -1,26 +1,24 @@
 <template>
-  <picture v-if="isURL()">
-    <img :data-src="getSrc()" :class="['lazyload', imgClass]" :alt="alt" />
-  </picture>
+  <img
+    v-if="isURL()"
+    :data-src="getSrc()"
+    :class="['lazyload']"
+    :alt="alt"
+    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50'%3E%3Crect width='50' height='50' style='fill:%23dcf6d5;' /%3E%3C/svg%3E"
+  />
 
   <!-- For explanation of v-if v-else see https://vuejs.org/v2/guide/conditional.html -->
   <!--  -->
   <!-- SVGs: default is to include if smaller than 5kb -->
-  <!-- For SVGs no img-class can be used, just class -->
-  <div
+  <img
     v-else-if="isSVG()"
-    v-html="require('~/static/img/' + stripExtension(getSrc()) + '.svg?raw')"
+    :src="require('~/static/img/' + stripExtension(getSrc()) + '.svg?data')"
+    :alt="alt"
   />
 
   <!-- if gif filetype, no reponsive sizes generated, just webp and compression -->
   <!-- Note: for GIF, the `size` property is ignored -->
-  <picture v-else>
-    <img
-      :data-src="'/img/' + getSrc()"
-      :class="['lazyload', imgClass]"
-      :alt="alt"
-    />
-  </picture>
+  <img v-else :data-src="'/img/' + getSrc()" :class="['lazyload']" :alt="alt" />
 </template>
 
 <script>
@@ -35,13 +33,6 @@ export default {
     },
     // img alt text
     alt: {
-      type: String,
-      default: '',
-    },
-    // classes to apply to inner <img> tag (tailwindcss and so on)
-    // DOES NOT apply to .svg
-    // Use as <BaseImage img-class="..." ... />
-    imgClass: {
       type: String,
       default: '',
     },
@@ -64,11 +55,7 @@ export default {
 </script>
 
 <style scoped>
-/* picture {
-  @apply overflow-hidden;
-} */
-
-picture img {
+img {
   @apply object-cover;
 }
 </style>

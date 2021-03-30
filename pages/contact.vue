@@ -50,10 +50,9 @@
       <div class="lg:absolute lg:inset-0">
         <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
           <base-img
-            img-class="object-cover w-full h-56 lg:absolute lg:h-full"
+            class="object-cover w-full h-56 lg:absolute lg:h-full"
             :src="'fox5.jpg'"
             :alt="''"
-            size="lg"
           />
         </div>
       </div>

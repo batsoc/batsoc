@@ -375,6 +375,12 @@ collections:
                 name: url
                 widget: string
                 default: '/'
+          - label: 'Organization Name'
+            name: 'orgName'
+            widget: 'string'
+          - label: 'Footer Address'
+            name: 'footerAddress'
+            widget: 'string'
           - label: 'Footer text'
             name: 'footerText'
             widget: 'string'

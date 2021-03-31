@@ -51,6 +51,8 @@ export default {
     'nuxt-rfg-icon',
     // Doc https://sitemap.nuxtjs.org/guide/setup
     '@nuxtjs/sitemap',
+    // Doc https://github.com/nuxt-community/google-gtag-module
+    '@nuxtjs/google-gtag',
   ],
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
@@ -72,6 +74,18 @@ export default {
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     baseURL: process.env.URL,
+  },
+
+  // Doc https://github.com/nuxt-community/google-gtag-module
+  'google-gtag': {
+    id: 'G-LNYW3JRWXF',
+    config: {
+      anonymize_ip: true, // anonymize IP
+      send_page_view: false, // might be necessary to avoid duplicated page track on page reload
+      linker: {
+        domains: ['batsoc.org.au'],
+      },
+    },
   },
 
   sitemap: {

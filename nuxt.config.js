@@ -49,6 +49,8 @@ export default {
     '@nuxtjs/axios',
     // Doc https://github.com/pimlie/nuxt-rfg-icon
     'nuxt-rfg-icon',
+    // Doc https://sitemap.nuxtjs.org/guide/setup
+    '@nuxtjs/sitemap',
   ],
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
@@ -70,6 +72,16 @@ export default {
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     baseURL: process.env.URL,
+  },
+
+  sitemap: {
+    hostname: 'https://batsoc.org.au',
+    gzip: true,
+    // exclude can be used to exclude non-dynamic routes from the site-map
+    // Any route in the generate.routes property will be added to the sitemap
+    // and it doesn't appear such a route can be excluded
+    exclude: ['/404'],
+    trailingSlash: true,
   },
 
   'rfg-icon': {

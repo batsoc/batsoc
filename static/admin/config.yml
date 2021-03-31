@@ -397,4 +397,28 @@ collections:
           - label: 'Footer text'
             name: 'footerText'
             widget: 'string'
+
+      - label: Contact Us Page
+        name: contact-us
+        format: 'json'
+        file: 'content/settings/contact-us.json'
+        editor:
+          preview: false
+        fields:
+          - label: 'Header 1 (Large text)'
+            name: 'h1'
+            widget: 'string'
+          - label: 'Subheader 1 Short text'
+            name: 'subH1'
+            widget: 'text'
+          - label: 'Header 2 (Large text)'
+            name: 'h2'
+            widget: 'string'
+          - label: 'Subheader 2 Short text'
+            name: 'subH2'
+            widget: 'text'
+          - label: 'Meta Headers'
+            name: 'metaData'
+            widget: 'object'
+            fields: *metaAll
         

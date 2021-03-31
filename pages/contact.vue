@@ -33,14 +33,12 @@
         <h1
           class="text-4xl font-extrabold leading-10 tracking-tight text-center text-gray-900 sm:text-5xl sm:leading-none lg:text-6xl"
         >
-          Get in touch
+          {{ contactData.h1 }}
         </h1>
         <p
           class="max-w-3xl mx-auto mt-6 text-xl leading-normal text-center text-gray-500"
         >
-          Convallis feugiat et aliquet pellentesque dictum nisi, velit. Egestas
-          fermentum adipiscing risus quam ac consectetur mattis turpis
-          tristique.
+          {{ contactData.subH1 }}
         </p>
       </div>
     </div>
@@ -62,10 +60,10 @@
         <div class="lg:pr-8">
           <div class="max-w-md mx-auto sm:max-w-lg lg:mx-0">
             <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">
-              Let's work together
+              {{ contactData.h2 }}
             </h2>
             <p class="mt-4 text-lg text-gray-500 sm:mt-3">
-              We’d love to hear from you! Send us a message using the form.
+              {{ contactData.subH2 }}
             </p>
 
             <base-alert
@@ -223,6 +221,8 @@
 </template>
 
 <script>
+import { metaFromCMS } from '@/utils/utils-meta'
+
 // Tutorial at https://www.netlify.com/blog/2018/09/07/how-to-integrate-netlify-forms-in-a-vue-app/
 
 // I used Vue-Formulate https://vueformulate.com/guide/ for form validation and handling
@@ -236,8 +236,16 @@ export default {
       form: {},
     }
   },
-  // mounted() {
-  // },
+  head() {
+    return metaFromCMS(this.contactData, this.$route.path, this.$route.query)
+  },
+  async asyncData({ $content }) {
+    const contactData = await $content('settings/contact-us').fetch()
+
+    return {
+      contactData,
+    }
+  },
   methods: {
     encode(data) {
       return Object.keys(data)

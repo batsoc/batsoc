@@ -21,7 +21,8 @@ x-meta: &metaAll
     <<: *metaDefault
   - label: 'Meta Description'
     name: 'description'
-    <<: *metaDefault
+    widget: 'text'
+    required: false
   - label: 'OpenGraph Image'
     name: 'og_image'
     widget: 'image'
@@ -294,6 +295,18 @@ collections:
                 widget: 'string'
                 pattern: ['https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)', "Must be a url. Example: https://test.com"]
                 required: false
+
+      - label: Landing Page Meta Headers
+        name: meta-headers
+        format: 'json'
+        file: 'content/landing-page/meta-headers.json'
+        editor:
+          preview: false
+        fields:
+          - label: 'Meta Headers'
+            name: 'metaData'
+            widget: 'object'
+            fields: *metaAll
               
   
   ## 
@@ -384,7 +397,4 @@ collections:
           - label: 'Footer text'
             name: 'footerText'
             widget: 'string'
-          - label: 'Meta Data Defaults'
-            name: 'meta'
-            widget: 'object'
-            fields: *metaAll
+        

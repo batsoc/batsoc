@@ -1,6 +1,7 @@
 {
   "name": "batsoc",
   "version": "1.0.0",
+  "author": "@amerkay",
   "private": true,
   "scripts": {
     "dev": "nuxt",

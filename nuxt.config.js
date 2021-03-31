@@ -4,7 +4,9 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'batsoc',
+    title: 'BatSoc',
+    titleTemplate:
+      '%s — ' + require('./content/settings/site-settings.json').orgName,
     htmlAttrs: {
       lang: 'en',
     },

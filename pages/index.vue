@@ -25,13 +25,16 @@
 
 <script>
 import LazyHydrate from 'vue-lazy-hydration'
+import { metaFromCMS } from '@/utils/utils-meta'
 
 export default {
   components: {
     LazyHydrate,
   },
-
-  async asyncData({ $content, $axios }) {
+  head() {
+    return metaFromCMS(this.metaData, this.$route.path, this.$route.query)
+  },
+  async asyncData({ $content }) {
     const heroData = await $content('landing-page/hero').fetch()
     const logoCloudData = await $content('landing-page/logo-cloud').fetch()
     const featuresData = await $content('landing-page/features').fetch()
@@ -45,6 +48,7 @@ export default {
     const faqData = await $content('landing-page/faq').fetch()
 
     const teamData = await $content('landing-page/team').fetch()
+    const metaData = await $content('landing-page/meta-headers').fetch()
 
     return {
       heroData,
@@ -54,6 +58,7 @@ export default {
       eventsHeadingData,
       faqData,
       teamData,
+      metaData,
     }
   },
 }

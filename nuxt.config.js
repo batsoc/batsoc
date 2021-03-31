@@ -47,6 +47,8 @@ export default {
     '@nuxtjs/dayjs',
     // Doc https://axios.nuxtjs.org/setup
     '@nuxtjs/axios',
+    // Doc https://github.com/pimlie/nuxt-rfg-icon
+    'nuxt-rfg-icon',
   ],
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
@@ -68,6 +70,10 @@ export default {
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     baseURL: process.env.URL,
+  },
+
+  'rfg-icon': {
+    masterPicture: 'static/img/logo-lg.png',
   },
 
   formulate: {

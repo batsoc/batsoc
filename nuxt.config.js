@@ -65,10 +65,7 @@ export default {
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
-    baseURL:
-      process.env.NODE_ENV == 'production'
-        ? 'https://batsoc.org.au'
-        : 'http://localhost:8888',
+    baseURL: process.env.URL,
   },
 
   formulate: {

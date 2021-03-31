@@ -118,7 +118,7 @@ const getCanonicalUrl = (routePath, slug) => {
   }
 
   const slash = routePath.endsWith('/') ? '' : '/'
-  return `${process.env.SITE_URL}${routePath}${slash}`
+  return `${process.env.URL}${routePath}${slash}`
 }
 
 // local path

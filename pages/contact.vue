@@ -201,17 +201,17 @@
     </div>
 
     <!-- CTA Section -->
-    <div class="bg-orange-400">
+    <div class="bg-mango-400">
       <div
         class="max-w-md px-4 py-16 mx-auto text-center sm:max-w-2xl sm:py-24 sm:px-6 lg:px-8 lg:py-32"
       >
         <h2 class="text-3xl font-extrabold sm:text-4xl">
           <span class="block text-white">Looking to volunteer?</span>
-          <span class="block text-orange-900">Message us.</span>
+          <span class="block text-mango-900">Message us.</span>
         </h2>
         <a
           href="#"
-          class="inline-flex items-center justify-center w-full px-5 py-3 mt-8 text-base font-medium text-orange-600 bg-white border border-transparent rounded-md shadow-md hover:bg-orange-50 sm:w-auto"
+          class="inline-flex items-center justify-center w-full px-5 py-3 mt-8 text-base font-medium bg-white border border-transparent rounded-md shadow-md text-mango-600 hover:bg-mango-50 sm:w-auto"
         >
           <span>Send us a message, say hi!</span>
         </a>

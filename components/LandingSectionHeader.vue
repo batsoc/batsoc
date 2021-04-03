@@ -1,6 +1,6 @@
 <template>
   <div class="px-4 pt-16 text-center md:pt-24 sm:px-8">
-    <h2 class="text-base font-semibold tracking-wide text-orange-500 uppercase">
+    <h2 class="text-base font-semibold tracking-wide text-mango-500 uppercase">
       {{ h2 }}
     </h2>
     <p

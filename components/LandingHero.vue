@@ -1,5 +1,5 @@
 <template>
-  <div class="relative bg-navy-500">
+  <div class="relative bg-steel-900">
     <main class="lg:relative">
       <div
         class="w-full pt-16 pb-20 mx-auto text-center max-w-7xl lg:py-48 lg:text-left"
@@ -9,7 +9,7 @@
             class="text-4xl font-extrabold tracking-tight text-gray-100 sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl"
           >
             <span class="block xl:inline"> {{ cData.h1Line1 }} </span>
-            <span class="block text-orange-500 xl:inline">
+            <span class="block text-mango-500 xl:inline">
               {{ cData.h1Line2 }}
             </span>
           </h1>

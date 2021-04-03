@@ -12,7 +12,7 @@
               </p>
               <!-- <div class="flex flex-shrink-0 ml-2">
                 <p
-                  class="inline-flex px-2 text-xs font-semibold leading-5 text-green-800 bg-green-100 rounded-full"
+                  class="inline-flex px-2 text-xs font-semibold leading-5 text-limegreen-800 bg-limegreen-100 rounded-full"
                 >
                   Full-time
                 </p>

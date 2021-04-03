@@ -10,33 +10,33 @@
 }
 
 // cool button
-// inline-flex justify-center px-4 py-2 text-sm font-medium text-white bg-orange-600 border border-transparent rounded-md shadow-sm hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500
+// inline-flex justify-center px-4 py-2 text-sm font-medium text-white bg-mango-600 border border-transparent rounded-md shadow-sm hover:bg-mango-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-mango-500
 
 .btn-primary {
-  @apply bg-orange-500 text-white; // brand color
+  @apply bg-mango-500 text-white; // brand color
 
   &:hover {
-    @apply text-white bg-orange-400;
+    @apply text-white bg-mango-400;
   }
   &:focus {
-    @apply text-white border-orange-700;
+    @apply text-white border-mango-700;
   }
   &:active {
-    @apply text-white bg-orange-700;
+    @apply text-white bg-mango-700;
   }
 }
 
 .btn-secondary {
-  @apply bg-navy-500 text-white;
+  @apply bg-steel-900 text-white;
 
   &:hover {
-    @apply text-white bg-navy-400;
+    @apply text-white bg-steel-700;
   }
   &:focus {
-    @apply text-white border-navy-600;
+    @apply text-white border-steel-900;
   }
   &:active {
-    @apply text-white bg-navy-600;
+    @apply text-white bg-steel-900;
   }
 }
 
@@ -49,22 +49,22 @@
   }
   &:focus,
   &:active {
-    @apply border-navy-300 text-gray-300; //  shadow-outline-navy
+    @apply border-steel-600 text-gray-300; //  shadow-outline-navy
   }
 
   &.btn-primary {
-    @apply border-orange-500 text-orange-500;
+    @apply border-mango-500 text-mango-500;
 
     &:hover {
-      @apply text-gray-100 bg-orange-500;
+      @apply text-gray-100 bg-mango-500;
     }
   }
 
   &.btn-secondary {
-    @apply border-navy-500 text-navy-500;
+    @apply border-steel-900 text-steel-900;
 
     &:hover {
-      @apply text-gray-100 bg-navy-500;
+      @apply text-gray-100 bg-steel-900;
     }
   }
 }
@@ -78,7 +78,7 @@
 }
 
 // .btn-link {
-//   @apply text-navy-500 font-normal;
+//   @apply text-steel-900 font-normal;
 
 //   &:hover {
 //     text-decoration: underline;

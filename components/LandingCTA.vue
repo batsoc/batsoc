@@ -1,8 +1,8 @@
 <template>
   <!-- This example requires Tailwind CSS v2.0+ -->
-  <div class="relative bg-navy-500">
+  <div class="relative bg-steel-900">
     <div
-      class="h-56 bg-navy-500 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2"
+      class="h-56 bg-steel-900 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2"
     >
       <base-img
         class="object-cover w-full h-full"

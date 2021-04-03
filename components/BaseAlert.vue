@@ -2,14 +2,14 @@
   <!-- This example requires Tailwind CSS v2.0+ -->
   <!-- If danger -->
   <div
-    class="p-4 border-l-4 border-red-400 bg-red-50"
+    class="p-4 border-l-4 border-tomato-400 bg-tomato-50"
     v-if="alertType == 'danger'"
   >
     <div class="flex">
       <div class="flex-shrink-0">
         <!-- Heroicon name: solid/exclamation -->
         <svg
-          class="w-5 h-5 text-red-400"
+          class="w-5 h-5 text-tomato-400"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
           fill="currentColor"
@@ -23,9 +23,9 @@
         </svg>
       </div>
       <div class="ml-3">
-        <p class="text-sm text-red-700">
+        <p class="text-sm text-tomato-700">
           {{ text }}
-          <!-- <a href="#" class="font-medium text-red-700 underline hover:text-red-600">
+          <!-- <a href="#" class="font-medium text-tomato-700 underline hover:text-tomato-600">
           Upgrade your account to add more credits.
         </a> -->
         </p>
@@ -34,12 +34,12 @@
   </div>
 
   <!-- If success -->
-  <div class="p-4 bg-green-100 border-l-4 border-green-500" v-else>
+  <div class="p-4 bg-limegreen-100 border-l-4 border-limegreen-500" v-else>
     <div class="flex">
       <div class="flex-shrink-0">
         <!-- Heroicon name: solid/exclamation -->
         <svg
-          class="w-5 h-5 text-green-500"
+          class="w-5 h-5 text-limegreen-500"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
           fill="currentColor"
@@ -53,9 +53,9 @@
         </svg>
       </div>
       <div class="ml-3">
-        <p class="text-sm text-green-800">
+        <p class="text-sm text-limegreen-800">
           {{ text }}
-          <!-- <a href="#" class="font-medium text-green-700 underline hover:text-green-600">
+          <!-- <a href="#" class="font-medium text-limegreen-700 underline hover:text-limegreen-600">
           Upgrade your account to add more credits.
         </a> -->
         </p>

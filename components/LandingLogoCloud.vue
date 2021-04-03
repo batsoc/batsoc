@@ -1,6 +1,6 @@
 <template>
   <!-- This example requires Tailwind CSS v2.0+ -->
-  <div class="bg-green-400">
+  <div class="bg-limegreen-300">
     <div class="px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:px-8">
       <div class="grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5">
         <a
@@ -11,7 +11,7 @@
           :key="logo.img"
         >
           <base-img
-            class="w-auto rounded max-h-24"
+            class="w-auto rounded max-h-16"
             :src="logo.img"
             :alt="logo.alt"
           />

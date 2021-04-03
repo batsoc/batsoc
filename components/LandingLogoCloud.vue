@@ -10,11 +10,7 @@
           v-for="logo in cData.logos"
           :key="logo.img"
         >
-          <base-img
-            class="w-auto rounded max-h-16"
-            :src="logo.img"
-            :alt="logo.alt"
-          />
+          <base-img class="w-auto max-h-24" :src="logo.img" :alt="logo.alt" />
         </a>
       </div>
     </div>
@@ -31,3 +27,9 @@ export default {
   },
 }
 </script>
+
+<style lang="scss" scoped>
+img {
+  max-width: 11rem;
+}
+</style>

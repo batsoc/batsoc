@@ -2,7 +2,7 @@
   "navigation": [
     {
       "label": "What do we do?",
-      "url": "/#what-do-we-do"
+      "url": "/#what-we-do"
     },
     {
       "label": "Events",
@@ -24,7 +24,7 @@
   "footerLinks": [
     {
       "label": "What do we do?",
-      "url": "/#what-do-we-do"
+      "url": "/#what-we-do"
     },
     {
       "label": "Upcoming Events",
@@ -51,6 +51,6 @@
   "footerText": "© 2021 Bats and Trees Society of Cairns, Inc. Built with ❤️ and 🦇",
   "nav_left_button": {
     "label": "Donate via Patreon",
-    "url": "https://www.patreon.com/Twistoffatefarmsanctuary"
+    "url": "https://www.patreon.com/batsoc-australia"
   }
 }

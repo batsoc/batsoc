@@ -1,6 +1,6 @@
 <template>
   <div class="px-4 pt-16 text-center md:pt-24 sm:px-8">
-    <h2 class="text-base font-semibold tracking-wide text-mango-500 uppercase">
+    <h2 class="text-base font-semibold tracking-wide uppercase text-mango-500">
       {{ h2 }}
     </h2>
     <p
@@ -10,7 +10,7 @@
       {{ heading }}
     </p>
     <p
-      class="max-w-2xl mt-4 text-xl text-gray-500 lg:mx-auto"
+      class="max-w-4xl mt-4 text-xl text-gray-500 whitespace-pre-line lg:mx-auto"
       v-if="subHeading"
     >
       {{ subHeading }}

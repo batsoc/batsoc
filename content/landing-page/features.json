@@ -1,22 +1,21 @@
 {
   "h2": "Raising awareness and advocating ",
   "heading": "What do we do?",
-  "subHeading": " Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam. ",
+  "subHeading": "We are a not-for-profit incorporated organisation (NGO) that conserves and cares for all bats in FNQ, particularly  the Spectacled Flying-fox.\n\nOur vision is to recover and conserve the Spectacled Flying-fox, raise community awareness and to inform people  how we can share our world and  live with flying-foxes and other bats.\n\nWe support FNQ bat carers through donations and work with community groups and all levels of government to advocate for better legislation and management to conserve bats.",
   "subSections": [
     {
       "heading": "Founding member of the Spectacled Flying Fox Recovery Team",
       "text": "The Spectacled flying-fox is listed as Endangered internationally on the IUCN Red List, nationally under the EPBC Act and under Queensland’s threatened species legislation. The Australian population has fallen by over 80% since 2004.\n\nAs a member of the recovery team, we nominated to uplist the SFF to critically endangered and are preparing  a new recovery plan with specific actions and funding to recover the population.",
       "btnLabel": "Learn more",
-      "btnUrl": "/",
+      "btnUrl": "",
       "img": "/img/fox2.jpg"
     },
     {
       "heading": "We work with local rescue groups, other recovery teams",
       "text": "Each year more than one hundred flying-foxes enter care either as  orphaned pups or as injured adults and may be in care for up to six months. Feeding and medications are expensive.\n\nWe advocate for bat carers and assist them financially through donations we receive.\n\nHelp us help bats by donating, planting a tree and/or by reporting where you see flying-foxes to our Save Our Flying-foxes Watch program\n",
-      "btnLabel": "Learn more",
-      "url": "/",
-      "img": "/img/fox4.jpg",
-      "btnUrl": "/#"
+      "btnLabel": "Reporting Flying-fox Sighting",
+      "btnUrl": "https://www.surveymonkey.com/r/2C7BMN8",
+      "img": "/img/fox4.jpg"
     },
     {
       "heading": "Community and school education",

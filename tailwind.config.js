@@ -14,6 +14,9 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
+  // see https://tailwindcss.com/docs/just-in-time-mode
+  mode: 'jit',
+
   // Extends the default Studio Meta Tailwind configuration here...
   darkMode: false, // or 'media' or 'class'
   theme: {
@@ -161,12 +164,12 @@ module.exports = {
   ],
   purge: {
     // Learn more on https://tailwindcss.com/docs/controlling-file-size/#removing-unused-css
-    enabled: process.env.NODE_ENV === 'production',
+    // enabled: process.env.NODE_ENV === 'production',
     whitelistPatterns: [/^formulate/],
     // If you really want to remove all unused styles, use the mode: 'all'
     // option and be very careful to provide the paths to all files that might
     // reference any classes or HTML elements
-    mode: 'all',
+    // mode: 'all',
     content: [
       'components/**/*.vue',
       'content/**/*.md',

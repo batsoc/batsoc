@@ -14,13 +14,13 @@
               <h2 class="text-3xl font-extrabold tracking-tight text-gray-900">
                 {{ heading }}
               </h2>
-              <p class="mt-4 text-lg text-gray-500">
+              <p class="mt-4 text-lg text-gray-500 whitespace-pre-line">
                 {{ text }}
               </p>
-              <div class="mt-6">
-                <a :href="btnUrl" class="btn btn-secondary btn-outline">
+              <div v-if="btnUrl && btnLabel" class="mt-6">
+                <base-btn :href="btnUrl" class="btn-outline btn-secondary">
                   {{ btnLabel }}
-                </a>
+                </base-btn>
               </div>
             </div>
           </div>

@@ -135,7 +135,7 @@ collections:
             widget: string
           - label: Sub-Heading Text
             name: subHeading
-            widget: string
+            widget: text
           - label: 'What we do sub-sections'
             name: 'subSections'
             widget: 'list'

@@ -5,7 +5,7 @@
   "subSections": [
     {
       "heading": "Founding member of the Spectacled Flying Fox Recovery Team",
-      "text": " Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis bibendum malesuada faucibus lacinia porttitor. Pulvinar laoreet sagittis viverra duis. In venenatis sem arcu pretium pharetra at. Lectus viverra dui tellus ornare pharetra. In venenatis sem arcu pretium pharetra at. Lectus viverra dui tellus ornare pharetra. ",
+      "text": "Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis bibendum malesuada faucibus lacinia porttitor. Pulvinar laoreet sagittis viverra duis. \n\nIn venenatis sem arcu pretium pharetra at. Lectus viverra dui tellus ornare pharetra. In venenatis sem arcu pretium pharetra at. Lectus viverra dui tellus ornare pharetra. ",
       "btnLabel": "Learn more",
       "btnUrl": "/",
       "img": "/img/fox2.jpg"
@@ -15,7 +15,8 @@
       "text": " Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis bibendum malesuada faucibus lacinia porttitor. Pulvinar laoreet sagittis viverra duis. In venenatis sem arcu pretium pharetra at. Lectus viverra dui tellus ornare pharetra. In venenatis sem arcu pretium pharetra at. Lectus viverra dui tellus ornare pharetra. ",
       "btnLabel": "Learn more",
       "url": "/",
-      "img": "/img/fox4.jpg"
+      "img": "/img/fox4.jpg",
+      "btnUrl": "/#"
     },
     {
       "heading": "Community and school education",

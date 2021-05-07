@@ -51,13 +51,13 @@
         </nav>
 
         <div class="items-center justify-end hidden md:flex md:flex-1 lg:w-0">
-          <a
+          <base-btn
             :href="siteSettings.nav_left_button.url"
             class="btn btn-primary"
             @click="mobileNavOpen = false"
           >
             {{ siteSettings.nav_left_button.label }}
-          </a>
+          </base-btn>
         </div>
       </div>
     </div>

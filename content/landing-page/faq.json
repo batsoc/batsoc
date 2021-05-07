@@ -1,23 +1,31 @@
 {
-  "heading": " Frequently asked questions ",
-  "h2": " Learn about Flying Fox ",
+  "heading": "Learn about Flying Fox",
+  "h2": "Frequently asked questions",
   "subHeading": " Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam. ",
   "questions": [
     {
-      "question": "What's the best thing about Flying foxes?",
-      "answer": "**Everything is!** Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.\n\n![Cute AF!](/img/fox9.jpg \"Cute AF!\")\n\nThis is how:\n\n* Lorem ipsum dolor sit\n* Amet consectetur adipisicing elit. \n* Quas cupiditate laboriosam fugiat."
+      "question": "No Touch, no risk",
+      "answer": "Remember if you see a bat in trouble, hanging low or on the ground, don’t try to help it yourself. Ring your local bat care group (In FNQ, they are: insert numbers for WCFNQ and FNQWR and Tolga Bat Hospital)) and a vaccinated rescuer will contact you and rescue the bat.\n\n A tiny proportion of bats may carry a potentially deadly disease called lyssavirus, but it is only transmissible by bites or open scratches contaminated by an infected bat’s saliva. If you don’t touch bats, you are safe from disease. \n\n It is perfectly safe to be under bats in a camp or under trees where they are feeding. We do ask you to try not to disturb them though.\n\n If by some mischance, you are bitten or scratched by any bat,  wash the wound site with soap and water for five minutes, apply an antiseptic and visit your doctor or local hospital to obtain post exposure vaccination. This vaccination is 100% effective if you receive it before onset of symptoms. \n\n For more information see Australasian Bat Scoiety’s Bat fact: Bats and your health - link to BatFacts tab on ausbats.org.au)"
     },
     {
       "question": "What's the best thing about Flying f0xes?",
+      "answer": "(importance of bats, intelligence, they are beautiful)"
+    },
+    {
+      "question": "Why is the SFF endangered and how can I help?",
+      "answer": " (threats and reasons for coming into care, what can you do? )"
+    },
+    {
+      "question": "Where can I see flying-foxes?",
+      "answer": "(Tolga Bat Hospital, BatReach, in the wild- link to Bat Tourism Trail (when it’s active)(atm: Flying-foxes use camps like backpackers use hostels- they are always on the move following the food resources but there are camps they use regularly at various times of the year. The Bat Tourism trail is coming- in the meantime check out the Australasian Bat Night program (ausbats.org.au) or contact us with your location and we’ll let you know where your nearest bats are)"
+    },
+    {
+      "question": "How can I live with flying-foxes?",
       "answer": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat."
     },
     {
-      "question": "What's the best thing ab0ut Flying foxes?",
-      "answer": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat."
-    },
-    {
-      "question": "What's the best th1ng about Flying foxes?",
-      "answer": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat."
+      "question": "I’ve heard many stories about bats- Are they true?",
+      "answer": "We bust the bat myths here."
     }
   ]
 }

@@ -18,7 +18,8 @@
     "core-js": "^3.9.1",
     "nuxt": "^2.15.3",
     "nuxt-rfg-icon": "^0.6.4",
-    "vue-lazy-hydration": "^2.0.0-beta.4"
+    "vue-lazy-hydration": "^2.0.0-beta.4",
+    "vue-scrollto": "^2.20.0"
   },
   "devDependencies": {
     "@nuxtjs/dayjs": "^1.3.0",

@@ -1,7 +1,7 @@
 <template>
   <div>
     <landing-section-header
-      id="what-do-we-do"
+      id="what-we-do"
       :h2="cData.h2"
       :heading="cData.heading"
       :subHeading="cData.subHeading"

@@ -50,6 +50,8 @@ export default {
     '@nuxtjs/sitemap',
     // Doc https://github.com/nuxt-community/google-gtag-module
     '@nuxtjs/google-gtag',
+    // https://www.npmjs.com/package/vue-scrollto
+    'vue-scrollto/nuxt',
   ],
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules

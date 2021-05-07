@@ -21,13 +21,13 @@
           </p>
           <div class="mt-10 sm:flex sm:justify-center lg:justify-start">
             <div class="mt-3 mr-2" v-for="btn in cData.buttons" :key="btn.url">
-              <a
+              <base-btn
                 :href="btn.url"
-                class="btn btn-lg"
+                class="btn-lg"
                 :class="[btn.isPrimary ? 'btn-primary' : 'btn-outline']"
               >
                 {{ btn.label }}
-              </a>
+              </base-btn>
             </div>
           </div>
         </div>

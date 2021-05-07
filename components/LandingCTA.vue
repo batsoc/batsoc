@@ -27,9 +27,9 @@
         </p>
         <div class="mt-8">
           <div class="inline-flex rounded-md shadow">
-            <nuxt-link :to="cData.btnUrl" class="btn btn-primary btn-lg">
+            <base-btn :href="cData.btnUrl" class="btn-primary btn-lg">
               {{ cData.btnLabel }}
-            </nuxt-link>
+            </base-btn>
           </div>
         </div>
       </div>

@@ -14,7 +14,11 @@
 </template>
 
 <script>
+// import the btn styles
+import '@/assets/css/base-btn.scss'
+
 import { ExternalLinkIcon } from 'vue-feather-icons'
+
 export default {
   props: {
     href: {

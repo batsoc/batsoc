@@ -10,12 +10,12 @@
           :key="link.label"
           class="px-5 py-2"
         >
-          <nuxt-link
-            :to="link.url"
+          <base-btn
+            :href="link.url"
             class="text-base text-gray-300 hover:text-gray-100"
           >
             {{ link.label }}
-          </nuxt-link>
+          </base-btn>
         </div>
       </nav>
       <div class="flex justify-center mt-8 space-x-6">

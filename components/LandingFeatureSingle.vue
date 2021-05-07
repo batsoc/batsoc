@@ -17,7 +17,7 @@
               <p class="mt-4 text-lg text-gray-500 whitespace-pre-line">
                 {{ text }}
               </p>
-              <div v-if="btnUrl && btnLabel" class="mt-6">
+              <div v-if="btnUrl && btnLabel" class="max-w-xs mt-6">
                 <base-btn :href="btnUrl" class="btn-outline btn-secondary">
                   {{ btnLabel }}
                 </base-btn>

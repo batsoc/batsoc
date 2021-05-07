@@ -1,22 +1,46 @@
 <template>
-  <a v-if="isExternal" :href="href" target="_blank" class="btn">
+  <component
+    :is="isExternal ? 'a' : 'nuxt-link'"
+    :href="href"
+    :to="getCleanHref()"
+    class="flex items-center justify-center w-auto"
+    :class="{ btn: !linkOnly }"
+    v-scroll-to="scrollTo"
+    :target="isExternal ? '_blank' : null"
+  >
     <slot></slot>
-  </a>
-  <nuxt-link v-else :to="href" class="btn" v-scroll-to="scrollTo">
-    <slot></slot>
-  </nuxt-link>
+    <external-link-icon v-if="isExternal" class="w-4 h-4 ml-2" />
+  </component>
 </template>
 
 <script>
+import { ExternalLinkIcon } from 'vue-feather-icons'
 export default {
-  props: ['href'],
+  props: {
+    href: {
+      type: String,
+      default: '#',
+    },
+    // if true, 'btn' class will NOT be added
+    linkOnly: {
+      type: Boolean,
+      default: false,
+    },
+  },
+  components: { ExternalLinkIcon },
   computed: {
     isExternal() {
-      return this.href.startsWith('http')
+      return this.getCleanHref().startsWith('http')
     },
     scrollTo() {
-      console.log(this.href.includes('#') ? this.href.split('#')[1] : null)
-      return this.href.includes('#') ? this.href.split('#')[1] : null
+      return !this.isExternal && this.href.includes('#')
+        ? '#' + this.href.split('#')[1]
+        : null
+    },
+  },
+  methods: {
+    getCleanHref() {
+      return this.href.replace('https://batsoc.org.au/', '/')
     },
   },
 }

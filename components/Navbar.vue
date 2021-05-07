@@ -39,15 +39,16 @@
         </div>
 
         <nav class="hidden space-x-10 md:flex">
-          <nuxt-link
+          <base-btn
             v-for="navItem in siteSettings.navigation"
             :key="navItem.label"
-            :to="navItem.url"
+            :href="navItem.url"
             class="text-base font-medium text-gray-500 hover:text-gray-900"
             @click="mobileNavOpen = false"
+            :link-only="true"
           >
             {{ navItem.label }}
-          </nuxt-link>
+          </base-btn>
         </nav>
 
         <div class="items-center justify-end hidden md:flex md:flex-1 lg:w-0">
@@ -112,25 +113,29 @@
           </div>
           <div class="mt-6">
             <nav class="grid gap-y-6">
-              <nuxt-link
+              <base-btn
                 v-for="navItem in siteSettings.navigation"
                 :key="navItem.label"
-                :to="navItem.url"
+                :href="navItem.url"
                 class="flex items-center rounded-md hover:bg-gray-50"
                 @click.native="mobileNavOpen = false"
+                :link-only="true"
               >
                 <span class="text-base font-medium text-gray-900">
                   {{ navItem.label }}
                 </span>
-              </nuxt-link>
+              </base-btn>
             </nav>
           </div>
         </div>
         <div class="px-5 py-6 space-y-6">
           <div>
-            <a :href="siteSettings.nav_left_button.url" class="btn btn-primary">
+            <base-btn
+              :href="siteSettings.nav_left_button.url"
+              class="btn-primary"
+            >
               {{ siteSettings.nav_left_button.label }}
-            </a>
+            </base-btn>
           </div>
         </div>
       </div>

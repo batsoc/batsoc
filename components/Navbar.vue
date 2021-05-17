@@ -156,8 +156,5 @@ export default {
     // map current logoText and businessType from store
     ...mapState('netlifycms', ['siteSettings']),
   },
-  mounted() {
-    console.log(this.siteSettings)
-  },
 }
 </script>

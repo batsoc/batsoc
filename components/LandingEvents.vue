@@ -11,7 +11,11 @@
         :subHeading="headingData.subHeading"
       />
       <div
-        class="grid max-w-lg gap-5 mx-auto mt-12 auto-rows-max lg:grid-cols-3 lg:max-w-none"
+        class="grid max-w-lg gap-5 mx-auto mt-12 auto-rows-max md:max-w-none"
+        :class="{
+          'lg:grid-cols-3': eventsFutureData.events.length > 2,
+          'lg:grid-cols-2 lg:max-w-3xl': eventsFutureData.events.length == 2,
+        }"
       >
         <div
           v-for="event in eventsFutureData.events"

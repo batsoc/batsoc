@@ -1,4 +1,13 @@
 {
+  "facebook": "BATSOCinc",
+  "footerText": "© 2021 Bats and Trees Society of Cairns, Inc. Built with ❤️ and 🦇",
+  "nav_left_button": {
+    "label": "Donate via Patreon",
+    "url": "https://www.patreon.com/batsoc"
+  },
+  "orgName": "Bats and Trees Society of Cairns Inc",
+  "instagram": "batsandtreessocietyofcairns",
+  "twitter": "BATSOCinc",
   "navigation": [
     {
       "label": "What do we do?",
@@ -21,6 +30,7 @@
       "url": "/contact"
     }
   ],
+  "footerAddress": "P.O Box 528, Kuranda, Queensland, 4881. Australia",
   "footerLinks": [
     {
       "label": "What do we do?",
@@ -42,15 +52,5 @@
       "label": "Contact Us",
       "url": "/contact"
     }
-  ],
-  "facebook": "BATSOCinc",
-  "twitter": "BATSOCinc",
-  "instagram": "batsandtreessocietyofcairns",
-  "orgName": "Bats and Trees Society of Cairns Inc",
-  "footerAddress": "P.O Box 528, Kuranda, Queensland, 4881. Australia",
-  "footerText": "© 2021 Bats and Trees Society of Cairns, Inc. Built with ❤️ and 🦇",
-  "nav_left_button": {
-    "label": "Donate via Patreon",
-    "url": "https://www.patreon.com/batsoc-australia"
-  }
+  ]
 }

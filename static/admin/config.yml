@@ -87,6 +87,7 @@ collections:
                 name: url
                 widget: string
                 default: '/'
+                required: false
               - label: 'Primary Button?'
                 name: isPrimary
                 widget: boolean
@@ -157,6 +158,7 @@ collections:
                 name: btnUrl
                 widget: string
                 default: '/'
+                required: false
               - label: Image
                 name: img
                 widget: image
@@ -362,6 +364,7 @@ collections:
                 name: url
                 widget: string
                 default: '/'
+                required: false
           - label: 'Top Navigation Menu buttons'
             name: 'navigation'
             widget: 'list'

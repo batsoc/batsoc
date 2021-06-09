@@ -3,10 +3,25 @@
   <div class="relative pt-16 pb-8 overflow-hidden bg-white">
     <div class="relative">
       <div
-        class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24"
+        class="
+          lg:mx-auto
+          lg:max-w-7xl
+          lg:px-8
+          lg:grid lg:grid-cols-2 lg:grid-flow-col-dense
+          lg:gap-24
+        "
       >
         <div
-          class="max-w-xl px-4 mx-auto sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0"
+          class="
+            max-w-xl
+            px-4
+            mx-auto
+            sm:px-6
+            lg:py-16
+            lg:max-w-none
+            lg:mx-0
+            lg:px-0
+          "
           :class="[isImgOnLeft ? 'lg:col-start-2' : '']"
         >
           <div>
@@ -30,10 +45,20 @@
           :class="[isImgOnLeft ? 'lg:col-start-1' : '']"
         >
           <div
-            class="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full"
+            class="
+              pl-4
+              -mr-48
+              sm:pl-6
+              md:-mr-16
+              lg:px-0
+              lg:m-0
+              lg:relative
+              lg:h-full
+            "
           >
             <base-img
-              :class="'w-full rounded-lg shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none ' +
+              :class="
+                'w-full rounded-lg shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none ' +
                 (isImgOnLeft ? 'right-0' : 'left-0')
               "
               :src="img"
@@ -76,7 +101,7 @@ export default {
     },
     btnUrl: {
       type: String,
-      default: '#',
+      default: null,
     },
   },
 }

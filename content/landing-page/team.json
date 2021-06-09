@@ -3,51 +3,50 @@
   "members": [
     {
       "name": "Maree Treadwell Kerr",
-      "title": "President",
-      "desc": " Ultricies massa malesuada viverra cras lobortis. Tempor orci hac ligula dapibus mauris sit ut eu. Eget turpis urna maecenas cras. Nisl dictum. ",
+      "title": "President, Head Bat",
+      "desc": "Maree,  is an ecologist and wildlife communicator, and has been active in flying-fox conservation and community education for over 30 years with a particular interest in bat tourism.",
       "img": "https://images.unsplash.com/photo-1505840717430-882ce147ef2d?ixlib=rb-1.2.1&ixqx=PguZ6clds6&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
       "twitter": "mareetreadwellk",
       "instagram": "mareetreadwellk",
       "websiteUrl": "https://twitte.com"
     },
     {
+      "name": "Hilary Whitehouse",
+      "title": "Vice President, Wise Bat",
+      "desc": "Associate Professor Hilary Whitehouse is an expert in climate change and sustainability education. She began direct involvement with flying-foxes during the heat stress event of 2018, where 23,000 flying-foxes died. "
+    },
+    {
       "name": "Sera Steves",
-      "title": "Secretary",
-      "desc": "Ultricies massa malesuada viverra cras lobortis. Tempor orci hac ligula dapibus mauris sit ut eu. Eget turpis urna maecenas cras. Nisl dictum. ",
+      "title": "Secretary, Secretary Bat",
+      "desc": "Sera grew up with bat conservation in USA and brought this experience to Australia. She is an ecologist and ethologist with experience in delivering wildlife presentations and chairs the Spectacled Flying-fox Recovery Team.",
       "img": "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
       "instagram": "mareetreadwellk"
     },
     {
-      "name": "Hilary Whitehouse",
-      "title": "Vice President",
-      "desc": "Ultricies massa malesuada viverra cras lobortis. Tempor orci hac ligula dapibus mauris sit ut eu. Eget turpis urna maecenas cras. Nisl dictum. ",
-      "img": "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
-    },
-    {
       "name": "Brynn Mathews",
       "title": "Treasurer",
-      "desc": "Ultricies massa malesuada viverra cras lobortis. Tempor orci hac ligula dapibus mauris sit ut eu. Eget turpis urna maecenas cras. Nisl dictum. ",
+      "desc": "Brynn has an extensive background in conservation advocacy< He has been involved in saving the SFF over many years  and brings legal expertise and local knowledge to the team.",
       "img": "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
     },
     {
       "name": "Rebecca Koller",
       "title": "Flying-fox Coordinator",
-      "desc": "Ultricies massa malesuada viverra cras lobortis. Tempor orci hac ligula dapibus mauris sit ut eu. Eget turpis urna maecenas cras. Nisl dictum. "
+      "desc": "Rebecca is a wildlife artist and the key flying-fox carer in the Cairns region, managing rehabilitation and release of orphaned and injured flying-foxes. She works closely with the bat hospitals and wildlife care groups mentoring and training new carers."
     },
     {
       "name": "Gaby Schierenbeck",
       "title": "BatSoc committee member",
-      "desc": "Ultricies massa malesuada viverra cras lobortis. Tempor orci hac ligula dapibus mauris sit ut eu. Eget turpis urna maecenas cras. Nisl dictum. "
-    },
-    {
-      "name": "Heather Owen",
-      "title": "BatSoc committee member",
-      "desc": "Ultricies massa malesuada viverra cras lobortis. Tempor orci hac ligula dapibus mauris sit ut eu. Eget turpis urna maecenas cras. Nisl dictum. "
+      "desc": "Gaby  has been involved in flying-fox rescue for over ten years and has the keenest eyes and ears for orphaned flying-foxes needing care. "
     },
     {
       "name": "Larni Gryphon",
       "title": "BatSoc committee member",
-      "desc": "Ultricies massa malesuada viverra cras lobortis. Tempor orci hac ligula dapibus mauris sit ut eu. Eget turpis urna maecenas cras. Nisl dictum. "
+      "desc": " Lar Ni is the newest member of the BatSoc team and is a long term volunteer with CAFNEC and campaigns for climate change action and wildlife conservation."
+    },
+    {
+      "name": "Heather Owen",
+      "title": "BatSoc committee member",
+      "desc": "Heather has been involved in spectacled flying-fox advocacy and care for over 10 years and is our specialty carer for premature and newborn orphaned pups."
     }
   ],
   "h2": "Our Team"

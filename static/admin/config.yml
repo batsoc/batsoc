@@ -279,7 +279,7 @@ collections:
               - label: 'Member Photo'
                 name: 'img'
                 widget: 'image'
-                required: true
+                required: false
               - label: 'Twitter @username (not URL)'
                 hint: 'Not URL or @user, just batsandtreessocietyofcairns for example.'
                 name: 'twitter'

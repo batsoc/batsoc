@@ -198,7 +198,7 @@ collections:
             widget: image
             required: true
 
-      - label: Events Section Heading (events are separate)
+      - label: Events Section Heading (events automatic from Eventbrite)
         name: events-heading
         format: 'json'
         file: 'content/landing-page/events-heading.json'

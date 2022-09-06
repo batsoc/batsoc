@@ -5,9 +5,10 @@
   "subSections": [
     {
       "heading": "Founding member of the Spectacled Flying Fox Recovery Team",
-      "text": "The Spectacled flying-fox is listed as Endangered internationally on the IUCN Red List, nationally under the EPBC Act and under Queensland’s threatened species legislation. The Australian population has fallen by over 80% since 2004.\n\nAs a member of the recovery team, we nominated to uplist the SFF to critically endangered and are preparing  a new recovery plan with specific actions and funding to recover the population.",
-      "btnLabel": "Learn more",
-      "img": "/img/fox2.jpg"
+      "text": "The Spectacled flying-fox is listed as Endangered internationally on the IUCN Red List, nationally under the EPBC Act and under Queensland’s threatened species legislation. The Australian population has fallen by over 80% since 2004.\n\nAs a member of the recovery team, we nominated to uplist the SFF to critically endangered and are preparing  a new recovery plan with specific actions and funding to recover the population. We are currently mapping flying-fox camps. You can help the recovery team find out more about the spectacled flying-fox and its habitat needs by telling us where you see flying-foxes.",
+      "btnLabel": "Learn more ",
+      "img": "/img/fox2.jpg",
+      "btnUrl": "https://www.surveymonkey.com/r/2C7BMN8"
     },
     {
       "heading": "We work with local rescue groups, other recovery teams",
